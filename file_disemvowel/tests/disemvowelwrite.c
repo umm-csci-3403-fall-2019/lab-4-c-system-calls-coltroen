@@ -41,9 +41,28 @@ int main(int argc, char *argv[]) {
     // You should set these to `stdin` and `stdout` by default
     // and then set them to user specified files when the user
     // provides files names as command line arguments.
+    //
     FILE *inputFile;
     FILE *outputFile;
+    if(argc==2){
+	    inputFile = fopen(argv[1],"r");
+	    char i;
+	    i = fgetc(inputFile);
+	    while(i != EOF)
+	    {
+		    printf("%c", i);
+		    i = fgetc(inputFile);
+	    }
+	    fclose(inputFile); 
+    }
+    if(argc==3){
+	    std::cout << "g4040khrdh";
+    }
+
+
+
  
+
 
     // Code that processes the command line arguments
     // and sets up inputFile and outputFile.
