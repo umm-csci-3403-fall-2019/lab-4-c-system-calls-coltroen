@@ -35,6 +35,7 @@ void disemvowel(FILE* inputFile, FILE* outputFile) {
      * in a buffer of data, copy the non-vowels to the output buffer, and
      * use fwrite to write that out.
      */
+
 }
 
 int main(int argc, char *argv[]) {
@@ -53,7 +54,16 @@ int main(int argc, char *argv[]) {
 		    printf("%c", i);
 		    i = fgetc(inputFile);
 	    }
-	    fclose(inputFile); 
+	    while(i != EOF){
+		    if(is_vowel(i)==0){
+		    printf("%c", i);
+		    i = fgetc(inputFile);
+		    }
+		    else
+			    i = fgetc(inputFile);
+	    }
+	    fclose(inputFile);
+	   
     }
     if(argc==3){
 	    std::cout << "g4040khrdh";
